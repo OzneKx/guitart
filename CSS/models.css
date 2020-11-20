@@ -241,6 +241,7 @@ body {
 .bottom-content .product1 img {
   height: 425px;
   width: 142px;
+  margin-bottom: 15px;
 }
 
 .bottom-content .product1 button {
