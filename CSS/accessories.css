@@ -241,6 +241,7 @@ body {
 }
 
 .bottom-content .product1 img {
+  margin-bottom: 15px;
   height: 250px;
   width: 250px;
 }
