@@ -148,6 +148,7 @@ body {
 
 
 
+
 /* === BANNER STYLIZATION === */
 .banner {
   display: flex;
@@ -217,7 +218,7 @@ body {
 
 .exhibition .image {
   height: 100%;
-  width: 400px;
+  width: 100%;
   max-width: 400px;
 }
 
@@ -329,7 +330,7 @@ footer .contact-info strong i {
 
 
 /* === RESPONSIVE SIZE LIMITATIONS === */
-@media(max-width: 1860px) {
+@media(max-width: 1908px) {
   /* === SECTION STYLIZATION === */
   .exhibition {
     display: grid;
@@ -513,7 +514,37 @@ footer .contact-info strong i {
   .banner {
     height: 375px;
   }
+
+  .exhibition {
+    width: 100%;
+    max-width: 400px;
+  }
 }
+
+
+@media(max-width: 580px) {
+  /* === HEADER STYLIZATION === */
+  .slogan .guitart h3 {
+    font-size: 10px;
+  }
+
+  .slogan .slogan-guitart i, a {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+
+  /* === TOP MENU STYLIZATION === */
+  .top-content  p, i {
+    font-size: 12px;
+  }
+
+  .top-content .right-icons a {
+    margin-right: 8px;
+  }
+}
+
+
 
 @media(max-width: 500px) {
   .banner {
