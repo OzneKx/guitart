@@ -189,6 +189,7 @@ body {
   border-radius: 8px;
   width: 19%;
   height: 50px;
+  border-radius: 10px;
   border: 2px solid transparent;
   transition: .2s;
   margin-top: 5px;
@@ -209,8 +210,9 @@ body {
 }
 
 .wrap-button a:hover {
-  background-color: rgba(126, 10, 10, 0.534);
+  background-color: rgba(81, 11, 11, 0.534);
   border: none;
+  border-radius: 10px;
 }
 
 .wrapper .div-login .form .wrap-button:hover {
@@ -254,7 +256,7 @@ body {
   justify-content: space-evenly;
   margin: 25px 50px;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1200px;
 }
 
 .bottom-content .product1 {
@@ -263,8 +265,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0px 15px;
-  width: 100%;
   max-width: 250px;
+  width: 100%;
 }
 
 .bottom-content .product1 p {
@@ -272,14 +274,14 @@ body {
 }
 
 .bottom-content .product1 img {
-  height: 250px;
-  width: 100px;
-  margin-bottom: 25px;
+  height: 425px;
+  width: 142px;
+  margin-bottom: 18px;
 }
 
 .bottom-content .product1 button {
   margin-top: 25px;
-  width: 70%;
+  width: 100%;
   background-color: rgba(85, 20, 20, 0.747);
   border: none;
   color: rgb(201, 204, 207);
@@ -573,19 +575,19 @@ body {
 
 
 /* === MAP STYLIZATION === */
-.map {
+.map-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
 }
 
-.map iframe {
-  border: 8px solid rgba(85, 20, 20, 0.747);
-  border-radius: 16px;
-}
+#map {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
 
-.map iframe:hover {
+  margin: 80px 0;
   border: 8px solid rgba(85, 20, 20, 0.747);
   border-radius: 16px;
 }
@@ -689,12 +691,6 @@ footer .contact-info strong i {
 
 
 
-  /* === PRODUCTS EXHIBITION === */
-  .bottom-products .product1 p {
-    font-size: 16px;
-  }
-
-
 
   /* == REVIEW CONTENT STYLIZATION == */
   .review-content .stars img {
@@ -789,14 +785,70 @@ footer .contact-info strong i {
 }
 
 
+@media(max-width: 960px) {
+  /* === PRODUCTS EXHIBITION === */
+  .bottom-content .bottom-products .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom-content .bottom-products .content .product1 {
+    margin: 25px 0px;
+  }
+}
+
+
+@media(max-width: 800px) {
+  /* === PRODUCTS EXHIBITION === */
+  .bottom-products {
+    width: 100%;
+  }
+
+  .bottom-products .product1 p {
+    font-size: 16px;
+  }
+
+  .bottom-content .product1 button {
+    font-size: 18px;
+  }
+}
+
+
+
+
+@media(max-width: 680px) {
+ .map-wrap #map {
+    max-width: 400px;
+  }
+}
+
+
 
 
 
 @media(max-width: 580px) {
-  /* === TOP MENU STYLIZATION === */
-  .top-content .logo a {
-    font-size: 8px;
+  /* === HEADER STYLIZATION === */
+  .slogan .guitart h3 {
+    font-size: 10px;
   }
+
+  .slogan .slogan-guitart i, a {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+
+  /* === TOP MENU STYLIZATION === */
+  .top-content  p, i {
+    font-size: 12px;
+  }
+
+  .top-content .right-icons a {
+    margin-right: 0px;
+  }
+
 
 
 
@@ -816,28 +868,6 @@ footer .contact-info strong i {
 
   .mid-content h1 p {
     font-size: 8px;
-  }
-
-
-
-
-
-  /* === PRODUCTS EXHIBITION === */
-  .bottom-content .bottom-products .content {
-    display: grid;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .bottom-products {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .bottom-content .product1 button {
-    font-size: 18px;
-    margin-bottom: 45px;
   }
 }
 
