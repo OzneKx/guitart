@@ -28,7 +28,8 @@ function clickEvent() {
       }
     }
 
-    if (globalUserStatus == true) {
+    if (globalUserStatus) {
+      globalUserStatus = false;
       alert("Usuário não encontrado! Cadastre-se! ");
     }
   });
