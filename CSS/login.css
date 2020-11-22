@@ -122,8 +122,6 @@ body {
 
 /* === LOGIN BUTTON === */
 .wrap-button {
-  background-color: rgba(85, 20, 20, 0.747);
-  border-radius: 10px;
   height: 48px;
   margin-bottom: 20px;
   width: 100%;
@@ -143,9 +141,19 @@ body {
   transition: .2s;
 }
 
-.wrap-button a:hover {
-  background-color: rgba(65, 14, 14, 0.534);
+.wrap-button button:hover {
+  background-color: rgba(81, 11, 11, 0.534);
   border: none;
+  border-radius: 10px;
+}
+
+.wrap-button button {
+  background-color: rgba(81, 11, 11, 0.534);
+  border: none;
+  height: 48px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
 
@@ -169,7 +177,7 @@ margin-bottom: 50px;
 .footer-content {
   display: flex;
   flex-direction: column;
-  height: 0vh;
+  height: 15vh;
 }
 
 .footer-content img {
@@ -205,5 +213,31 @@ margin-bottom: 50px;
   .wrapper .image {
     background-image: none;
     display: none;
+  }
+}
+
+
+@media(max-width: 480px) {
+  .div-login {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .wrap-button {
+    height: 48px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer-content img {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: 400px) {
+  .div-login {
+    width: 100%;
+    max-width: 325px;
   }
 }
