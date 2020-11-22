@@ -215,19 +215,31 @@ body {
 
 .cart .product-name .quantidade {
   margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart .product-name .quantidade .cart-items {
-  margin: 5px;
+  margin: 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cart .product-name .quantidade input {
+.cart .product-name .quantidade .cart-items button {
+  background-color: #000;
+  border: none;
+}
+
+.cart .product-name .quantidade .cart-items input {
   margin: 0 5px;
+  margin-left: 10px;
   width: 16px;
   height: 16px;
+  background-color: #000;
+  border: none;
 }
 
 .cart .price p {
@@ -246,12 +258,13 @@ body {
 
   background-color: rgba(85, 20, 20, 0.747);
 
-  border-radius: 0 22px;
+  border-radius: 0 16px;
   padding: 28px;
 
   margin: 0 auto;
 
-  margin-top: 35px;
+  margin-top: 55px;
+  margin-bottom: 55px;
 
   width: 100vw;
   max-width: 500px;
@@ -265,21 +278,66 @@ body {
 
 
 
-/* === MAP STYLIZATION === */
-.map {
-  margin-top: 55px;
+/* === PAYMENT STYLIZATION === */
+.payment-methods {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
+  justify-content: space-around;
 
-.map iframe {
-  border: 8px solid rgba(85, 20, 20, 0.747);
+  margin: 0 auto;
+  height: 250px;
+
+  width: 100%;
+  max-width: 250px;
+  background-color: #000;
   border-radius: 16px;
 }
 
-.map iframe:hover {
+.payment-methods p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.payment-methods select {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.payment-methods input, i, label {
+  margin: 0 2px;
+  color: #fff;
+}
+
+.payment-methods button {
+  margin: 8px 0;
+  background-color: rgba(85, 20, 20, 0.747);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 70%;
+}
+
+
+
+
+
+/* === MAP STYLIZATION === */
+.map-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+
+  margin: 80px 0;
   border: 8px solid rgba(85, 20, 20, 0.747);
   border-radius: 16px;
 }
@@ -293,7 +351,6 @@ footer {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 55px;
 }
 
 footer strong {
@@ -353,10 +410,6 @@ footer .contact-info strong i {
 
   .slogan .guitart h1 {
     font-size: 22px;
-  }
-
-  .slogan .guitart h3 {
-    display: none;
   }
 
 
@@ -491,6 +544,14 @@ footer .contact-info strong i {
   }
 }
 
+
+@media(max-width: 1000px) {
+  .slogan .guitart h3 {
+    display: none;
+  }
+}
+
+
 @media(max-width: 893px) {
   .content {
     max-width: 700px;
@@ -522,5 +583,32 @@ footer .contact-info strong i {
 
   .cart .description {
     margin: 0 16px;
+  }
+
+  .map-wrap #map {
+    max-width: 400px;
+  }
+}
+
+
+@media(max-width: 580px) {
+  /* === HEADER STYLIZATION === */
+  .slogan .guitart h3 {
+    font-size: 10px;
+  }
+
+  .slogan .slogan-guitart i, a {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+
+  /* === TOP MENU STYLIZATION === */
+  .top-content  p, i {
+    font-size: 12px;
+  }
+
+  .top-content .right-icons a {
+    margin-right: 8px;
   }
 }
