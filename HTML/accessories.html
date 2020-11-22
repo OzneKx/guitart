@@ -8,6 +8,9 @@
       src="https://kit.fontawesome.com/bbde3d316c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../JavaScript/jquery-3.5.1.min.js"></script>
+    <script src="../JavaScript/functions.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN57mkO88IXlQikM9Gp6zA2txiHgxMtJY&callback=initMap" async defer ></script>
     <link rel="icon" href="../assets/images/logo.jpg" type="image/x-icon" />
     <title>Acessórios</title>
   </head>
@@ -80,40 +83,67 @@
       <div class="bottom-products">
         <div class="content">
           <div class="product1">
-            <img src="../assets/images/palheta1.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/palheta1.png" />
+            <p class="item-name">
+              PALHETA AC/DC
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$19.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="product1">
-            <img src="../assets/images/palheta2.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/palheta2.png" />
+            <p class="item-name">
+              PALHETA FENDER
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$15.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="product1">
-            <img src="../assets/images/palheta3.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/palheta3.png" />
+            <p class="item-name">
+              PALHETA THE DOORS
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$25.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
@@ -125,40 +155,67 @@
       <div class="bottom-products">
         <div class="content">
           <div class="product1">
-            <img src="../assets/images/amplificador1.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/amplificador1.png" />
+            <p class="item-name">
+              AMPLIFICADOR MARSHALL
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$480.00</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="product1">
-            <img src="../assets/images/amplificador2.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/amplificador2.png" />
+            <p class="item-name">
+              AMPLIFICADOR METEORO
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$380.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="product1">
-            <img src="../assets/images/amplificador3.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/amplificador3.png" />
+            <p class="item-name">
+              AMPLIFICADOR ORANGE
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$325.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
@@ -166,44 +223,71 @@
         </div>
       </div>
 
-      <h3>CAMISETAS</h3>
+      <h3>VESTUÁRIO</h3>
       <div class="bottom-products">
         <div class="content">
           <div class="product1">
-            <img src="../assets/images/camisa1.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/camisa1.png" />
+            <p class="item-name">
+              JAQUETA EDDIE VAN HALEN
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$59.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="product1">
-            <img src="../assets/images/camisa2.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/camisa2.png" />
+            <p class="item-name">
+              JAQUETA GUITART
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$49.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="product1">
-            <img src="../assets/images/ShirtHenjin.png" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Exercitationem rerum sapiente eligendi aperiam id. Explicabo
-              veritatis impedit ipsum dolorem inventore ut pariatur
-              reprehenderit, exercitationem enim totam nostrum nobis a quas?
+            <img class="item-image" src="../assets/images/ShirtHenjin.png" />
+            <p class="item-name">
+             CAMISETA JIMI HENDRIX
             </p>
-            <button>
+            <div class="avaliation">
+              <div class="price">
+                <strong class="item-price">R$45.90</strong>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <button class="addCart" type="button">
               ADICIONAR AO CARRINHO
               <i class="fas fa-shopping-cart"></i>
             </button>
@@ -277,13 +361,8 @@
       </div>
     </div>
 
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125097.93064839153!2d92.19335357644522!3d11.529581709634336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30863a35c7c1b4e1%3A0x22f2e4fd1e2aa9c5!2sNorth%20Sentinel%20Island!5e0!3m2!1sen!2sbr!4v1604685962630!5m2!1sen!2sbr"
-        width="1000"
-        height="400"
-        tabindex="0">
-      </iframe>
+    <div class="map-wrap">
+      <div id="map"></div>
     </div>
 
     <footer>
