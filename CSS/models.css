@@ -139,6 +139,10 @@ body {
   margin-right: 12px;
 }
 
+.top-content .right-icons i {
+  font-size: 16px;
+}
+
 .top-content .right-icons i:hover {
   transition: .2s;
   color: #fff;
@@ -242,6 +246,18 @@ body {
   height: 425px;
   width: 142px;
   margin-bottom: 15px;
+}
+
+.bottom-content .product1 .avaliation {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.bottom-content .product1 .avaliation strong, i {
+  font-size: 20px;
 }
 
 .bottom-content .product1 button {
@@ -429,19 +445,19 @@ body {
 
 
 /* === MAP STYLIZATION === */
-.map {
+.map-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
 }
 
-.map iframe {
-  border: 8px solid rgba(85, 20, 20, 0.747);
-  border-radius: 16px;
-}
+#map {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto;
 
-.map iframe:hover {
+  margin: 80px 0;
   border: 8px solid rgba(85, 20, 20, 0.747);
   border-radius: 16px;
 }
@@ -556,12 +572,11 @@ footer .contact-info strong i {
     display: grid;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 67%;
   }
 
-  .bottom-content .bottom-products .content {
+  .bottom-content .bottom-products .content .product1 {
     margin: 25px 25px;
-
   }
 
   .bottom-products .product1 p {
@@ -569,9 +584,7 @@ footer .contact-info strong i {
   }
 
   .bottom-content .product1 button {
-    width: 200px;
-    height: 50px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
 
@@ -699,5 +712,33 @@ footer .contact-info strong i {
 @media(max-width: 680px) {
   .mid-content {
     height: 350px;
+  }
+}
+
+
+
+@media(max-width: 580px) {
+  /* === HEADER STYLIZATION === */
+  .slogan .guitart h3 {
+    font-size: 10px;
+  }
+
+  .slogan .slogan-guitart i, a {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+
+  /* === TOP MENU STYLIZATION === */
+  .top-content  p, i {
+    font-size: 12px;
+  }
+
+  .top-content .right-icons a {
+    margin-right: 8px;
+  }
+
+  .top-content .right-icons i {
+    font-size: 12px;
   }
 }
