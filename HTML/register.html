@@ -9,6 +9,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" href="../assets/images/logo.jpg" type = "image/x-icon">
+    <script src="../JavaScript/jquery-3.5.1.min.js"></script>
+    <script src="../JavaScript/registerValidation.js"></script>
     <title>Cadastro</title>
   </head>
   <body>
@@ -17,42 +19,47 @@
         <div class="title">
           <h3>Cadastro</h3>
         </div>
+
         <div class="input">
           <p>
             <i class="far fa-user"></i>
             NOME
           </p>
-          <input type="text" placeholder="Nome..." />
+          <input type="text" placeholder="Nome..." id="name" />
         </div>
         <div class="input">
           <p>
             <i class="far fa-envelope"></i>
             E-MAIL
           </p>
-          <input type="text" placeholder="exemplo@email.com.br" />
+          <input type="text" placeholder="exemplo@email.com.br" id="email" />
         </div>
         <div class="input">
           <p>
             <i class="fas fa-lock"></i>
             SENHA
           </p>
-          <input type="password" placeholder="Senha..." />
+          <input type="password" placeholder="Senha..." id="password" />
         </div>
+
         <div class="input">
           <p>
             <i class="fas fa-lock"></i>
             CONFIRMAR SENHA
           </p>
-          <input type="password" placeholder="Confirmar Senha..." />
+          <input type="password" placeholder="Confirmar Senha..." id="confirm" />
         </div>
+
         <div class="wrap-button">
-          <a href="../HTML/login.html"> Cadastrar </a>
+          <button type="submit" id="register">Cadastrar</button>
         </div>
+
         <footer class="footer-content">
           <img src="../assets/images/logo.jpg" alt="Logo">
           <h3>GuitART</h3>
         </footer>
       </div>
+
       <div class="image">
         <img src="../assets/images/RegistrationPete.jpeg" alt="Guitarra" />
       </div>
