@@ -1,186 +1,308 @@
-/* if (document.readyState == 'loading') {
-  document.addEventListener('DOMContentLoaded', ready);
-} else {
-  ready();
-}
+const payment = document.getElementById('pay');
 
-function ready() {
-  var addToCartButtons = document.getElementsByClassName('add');
-  for (var i = 0; i < addToCartButtons.length; i++) {
-    var button = addToCartButtons[i];
-    button.addEventListener('click', addToCartClicked);
-  }
+let cart = document.querySelectorAll('.addCart');
 
-  var quantityInputs = document.getElementsByClassName('cart-quantity-input');
-  for (var i = 0; i < quantityInputs.length; i++) {
-    var input = quantityInputs[i];
-    input.addEventListener('change', quantityChanged);
-  }
+let products = [
+  {
+    name: 'GUITARRA SG - PRETA',
+    image: 'SG1.png',
+    price: 1490,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA SG - VERMELHA',
+    image: 'SG2.png',
+    price: 1589,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA SG - BRANCA',
+    image: 'SG3.png',
+    price: 1680,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA LES PAUL - PRETA',
+    image: 'LP1.png',
+    price: 3350,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA LES PAUL - BRANCA',
+    image: 'SG2.png',
+    price: 3135,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA LES PAUL - SUNSET',
+    image: 'SG3.png',
+    price: 7000,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA FLYING V - MADEIRA',
+    image: 'FV1.png',
+    price: 2899,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA FLYING V - PRETA',
+    image: 'FV2.png',
+    price: 2700,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA FLYING V - MESCLADA',
+    image: 'FV3.png',
+    price: 2599,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA EXPLORER - MARROM',
+    image: 'EX1.png',
+    price: 3100,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA EXPLORER - PRETA',
+    image: 'EX2.png',
+    price: 3120,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA EXPLORER - VERMELHA',
+    image: 'EX3.png',
+    price: 3000,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA TELECASTER - AZUL',
+    image: 'TC1.png',
+    price: 5850,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA TELECASTER - PRETA',
+    image: 'TC2.png',
+    price: 2850,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA TELECASTER - VERMELHA',
+    image: 'TC3.png',
+    price: 2799,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA STRATOCASTER - AZUL',
+    image: 'SC1.png',
+    price: 5400,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA STRATOCASTER - ROSA',
+    image: 'SC2.png',
+    price: 1625,
+    quantity: 0
+  },
+  {
+    name: 'GUITARRA STRATOCASTER - CINZA',
+    image: 'SC3.png',
+    price: 1700,
+    quantity: 0
+  },
+  {
+    name: 'PALHETA AC/DC',
+    image: 'palheta1.png',
+    price: 19,
+    quantity: 0
+  },
+  {
+    name: 'PALHETA FENDER',
+    image: 'palheta2.png',
+    price: 15,
+    quantity: 0
+  },
+  {
+    name: 'PALHETA THE DOORS',
+    image: 'palheta3.png',
+    price: 25,
+    quantity: 0
+  },
+  {
+    name: 'AMPLIFICADOR MARSHALL',
+    image: 'amplificador1.png',
+    price: 480,
+    quantity: 0
+  },
+  {
+    name: 'AMPLIFICADOR METEORO',
+    image: 'amplificador2.png',
+    price: 380,
+    quantity: 0
+  },
+  {
+    name: 'AMPLIFICADOR ORANGE',
+    image: 'amplificador3.png',
+    price: 325,
+    quantity: 0
+  },
+  {
+    name: 'JAQUETA EDDIE VAN HALEN',
+    image: 'camisa1.png',
+    price: 59,
+    quantity: 0
+  },
+  {
+    name: 'JAQUETA GUITART',
+    image: 'camisa2.png',
+    price: 49,
+    quantity: 0
+  },
+  {
+    name: 'JAQUETA JIMI HENDRIX',
+    image: 'ShirtHenjin.png',
+    price: 45,
+    quantity: 0
+  },
+]
 
-  var removeCartItemButtons = document.getElementsByClassName('remove');
-  for (var i = 0; i < removeCartItemButtons.length; i++) {
-    var button = removeCartItemButtons[i];
-    button.addEventListener('click', removeCartItem);
-  }
-
-  document
-    .getElementsByClassName('btn-purchase')[0]
-    .addEventListener('click', purchaseClicked);
-}
-
-function purchaseClicked() {
-  alert('Thank you for your purchase');
-  var cartItems = document.getElementsByClassName('cart-items')[0];
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
-  }
-  updateCartTotal();
-}
-
-function purchaseClicked() {
-  alert('Obrigado! Seu cartão foi clonado :D');
-  var cartItems = document.getElementsByClassName('cart-items')[0];
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
-  }
-  updateCartTotal();
-}
-
-function removeCartItem(event) {
-  var buttonClicked = event.target;
-  buttonClicked.parentElement.parentElement.remove();
-  updateCartTotal();
-}
-
-function quantityChanged(event) {
-  var input = event.target;
-  if (isNaN(input.value) || input.value <= 0) {
-    input.value = 1;
-  }
-  updateCartTotal();
-}
-
-function addToCartClicked(event) {
-  var button = event.target;
-  var shopItem = button.parentElement.parentElement;
-  var title = shopItem.getElementsByClassName('item-name')[0].innerText;
-  var price = shopItem.getElementsByClassName('item-price')[0].innerText;
-  var imageSrc = shopItem.getElementsByClassName('item-image')[0].src;
-  addItemToCart(title, price, imageSrc);
-  updateCartTotal();
-}
-
-function addItemToCart(title, price, imageSrc) {
-  var cartRow = document.createElement('div');
-  cartRow.classList.add('cart-row');
-  var cartItems = document.getElementsByClassName('cart-items')[0];
-  var cartItemNames = cartItems.getElementsByClassName('cart-item-title');
-  for (var i = 0; i < cartItemNames.length; i++) {
-    if (cartItemNames[i].innerText == title) {
-      alert('This item is already added to the cart');
-      return;
-    }
-  }
-  var cartRowContents = `
-    <div class="cart">
-      <div class="product-name">
-        <img src="${imageSrc}" />
-        <p><b>${title}</b></p>
-        <div class="quantidade">
-          <strong>Quantidade</strong>
-          <div class="cart-items">
-            <button class="add">
-              <i class="fas fa-plus"></i>
-            </button>
-            <input type="number" value="1" class="cart-quantity-input">
-            <button class="remove">
-              <i class="fas fa-minus"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        <p>Lorem ipsum dolor</p>
-      </div>
-      <div class="price">
-        <p class="cart-price cart-column">VALOR<br>$&nbsp${price}</p>
-      </div>
-    </div>`;
-  cartRow.innerHTML = cartRowContents;
-  cartItems.append(cartRow);
-  cartRow
-    .getElementsByClassName('remove')[0]
-    .addEventListener('click', removeCartItem);
-  cartRow
-    .getElementsByClassName('cart-quantity-input')[0]
-    .addEventListener('change', quantityChanged);
-}
-
-function updateCartTotal() {
-  var cartItemContainer = document.getElementsByClassName('cart-items')[0];
-  var cartRows = cartItemContainer.getElementsByClassName('cart-row');
-  var total = 0;
-  for (var i = 0; i < cartRows.length; i++) {
-    var cartRow = cartRows[i];
-    var priceElement = cartRow.getElementsByClassName('cart-price')[0];
-    var quantityElement = cartRow.getElementsByClassName(
-      'cart-quantity-input',
-    )[0];
-    var price = parseFloat(priceElement.innerText.replace('R$', ''));
-    var quantity = quantityElement.value;
-    total = total + price * quantity;
-  }
-  total = Math.round(total * 100) / 100;
-  document.getElementsByClassName('cart-total-price')[0].innerText =
-    'R$' + total;
-}
-
- */
-
-var data = [];
-var storage = window.localStorage;
-var globalUserStatus = false;
-
-
-$(document).ready(function () {
-  clickEvent();
-});
-
-
-function clickEvent() {
-  $("#pay").click(function() {
-    user = JSON.parse(localStorage.getItem('user'));
-    for (c = 0; c < user.length; c++) {
-      if (user[c][1] == email && user[c][2] == password) {
-        alert("Compra concluída com sucesso! Volte sempre");
-      } else {
-        globalUserStatus = true;
-      }
-    }
-
-    if (globalUserStatus == true) {
-      alert("Usuário não encontrado! Cadastre-se! ");
-    }
+for (let c = 0; c < cart.length; c++) {
+  cart[c].addEventListener('click', () => {
+    numberCart(products[c]);
+    setItems(products[c]);
+    totalCost(products[c]);
   });
 }
 
+function onLoadCartNumbers() {
+  let productNumber = localStorage.getItem('numberCart');
+
+  if (productNumber) {
+    document.querySelector('.icon-cart span').textContent = productNumber;
+  }
+}
 
 
+function numberCart(product) {
+  let productNumber = localStorage.getItem('numberCart');
+
+  productNumber = parseInt(productNumber);
+
+  if (productNumber) {
+    localStorage.setItem('numberCart', productNumber + 1);
+    document.querySelector('.icon-cart span').textContent = productNumber + 1;
+  } else {
+    localStorage.setItem('numberCart', 1);
+    document.querySelector('.icon-cart span').textContent = 1;
+  }
+}
 
 
+function setItems(product) {
+  let cartItems = localStorage.getItem('productsInCart');
+  cartItems = JSON.parse(cartItems);
+
+  if (cartItems != null) {
+    if (cartItems[product.name] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [product.name]: product
+      }
+    }
+    cartItems[product.name].quantity += 1;
+  } else {
+    product.inCart = 1;
+    cartItems = {
+      [product.name]: product
+    }
+  }
+
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product) {
+  let cartCost = localStorage.getItem('totalCost');
+
+  if (cartCost != null) {
+    cartCost = parseInt(cartCost);
+    localStorage.setItem("totalCost", cartCost + product.price);
+  } else {
+    localStorage.setItem("totalCost", product.price);
+  }
+}
+
+
+function displayCart() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+
+  let productContainer = document.querySelector(".container-cart");
+  let totalPriceContainer = document.querySelector(".total-price");
+  let cartCost = localStorage.getItem('totalCost');
+
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = ' ';
+    Object.values(cartItems).map(item => {
+      productContainer.innerHTML += `
+        <div class="cart">
+          <div class="product-name">
+            <img class="item-img" src="../assets/images/${item.image}">
+            <p><b>${item.name}</b></p>
+            <div class="quantidade">
+              <strong>Quantidade</strong>
+              <div class="cart-items">
+                <div class="quantity"><span>${item.quantity}</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              ÓTIMA ESCOLHA :D <br>
+              Este instrumento é um dos melhores que temos aqui na loja!
+              Vários guitarristas profissionais amam seu som.
+            </p>
+          </div>
+          <div class="price">
+            <p>
+              &nbsp&nbspVALOR<br>
+              R$${item.price},00
+            </p>
+          </div>
+        </div>
+      `
+
+      totalPriceContainer.innerHTML += `
+        ${cartCost},00
+      `
+    });
+  }
+}
+
+
+onLoadCartNumbers();
+displayCart();
 
 
 function initMap() {
   var configuracoes = {
-    center: { lat: 11.551536855884436, lng: 92.24415040434234 },
-    zoom: 12,
-  };
+    center: {lat: 11.551536855884436, lng: 92.24415040434234},
+    zoom: 12
+  }
 
   var mapa = new google.maps.Map(document.getElementById('map'), configuracoes);
 
   var marcador = new google.maps.Marker({
-    position: { lat: 11.551536855884436, lng: 92.24415040434234 },
-    title: 'Ilha Sentilena do Norte',
-    map: mapa,
+    position: {lat: 11.551536855884436, lng: 92.24415040434234},
+    title: "Ilha Sentilena do Norte",
+    map: mapa
   });
 }
+
+
+payment.addEventListener('click', () => {
+  alert('Obrigado pela compra! Volte sempre!');
+  localStorage.removeItem('productsInCart');
+  window.location.reload();
+});
+
